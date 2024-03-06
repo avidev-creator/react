@@ -1,0 +1,33 @@
+ // These are the most important but very basics rules for React.//
+
+01. When you use React always create a folder named = components and not just component cause it will give error.
+02. This folder will have all your components that can be reused whenever and wherever you want.
+03. Make the file as a .jsx file for all the components cause its JavaScript Component.
+04. Always remember to start the file name , function name and export statement with Uppercase letter like App.jsx, function App() and export default App.
+05. Always export default the function from any component you create. 
+
+// Note : -- If you have the extension ES7 React/React Native Snippet use the rfce emmet and it will create the function for you in your component file.//
+
+06. In React we write JSX which is JavScript and inside that we write HTML so its HTML written inside JavaScript. Due to this some things will change from javascript -- 
+
+	A. We do not have to use ${} to inject variable here. We simply use {}.
+	B. Do not get confused with just {} cause we use that to destructure in Js but here if you want you can use {} to distructure things as well.
+	C. You also do not need to write things in `` as we use to do in JS. In JSX we can use {} to inject our variable wherever we want.
+
+07. In React we write HTML inside JSX but every function can only return 1 HTML tag to React. So if you have multiple tags inside your function than you either have to use
+	a div and wrap everything inside that or use <></> and wrap everything inside it. This is called as Empty HTML Tag = Fragments in React.
+08. In React we use Function Based Components so as these are functions we can also parameters in them. This is called as PROPS in React. Props is nothing but short for 
+	properties. You can pass any type of data as props from one React Component to Another React Component.
+	
+	A. const myArr = [1,2,3,4,5] // This is defined in App.jsx and you want to pass it in Card.jsx.
+		So in App.jsx -> <Card newArr = {myArr}/> // This is how you pass props to Card.jsx.
+		In Card.jsx -> function Card(props){ console.log(props.newArr)} // This is how you can use props.
+		But if you dont want to use this syntax you can use destructuring to break it down.
+		In Card.jsx -> function Card({newArr}) { console.log(newArr) }
+
+	B. Similary you can pass Any type of data using props or destructuring that.
+
+	C. Remember when you have Array of Objects and you want to pass 1 element at a time than you have to use Array.map() to first get all the elements separately and than
+		pass each element as a prop . Example -- let suppose imgArr = [{},{},{}] this is my Array of object containing images. To use that i have to use map function.
+		const imgItem = imgArr.map((item)=>item.src) This will seprate every object as a single array item and put it inside imgItem. Now you have to use -- 
+		imgItem[0] and pass that as a prop and you can use that easily now. So when you receive this prop let suppose newImg than you can directly use newImg.
