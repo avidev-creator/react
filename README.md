@@ -1,5 +1,5 @@
 # REACT
-This is a repo for small projects for REACT
+This is a repo to learn REACT by doing small projects.
 
 # Road Map -- 
 1. React Basics --
