@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
 
 export default function Github() {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    fetch("https://api.github.com/users/avidev-creator")
-      .then((response) => response.json())
-      .then((data) => setData(data));
-  }, []);
+  // const [data, setData] = useState([]);
+  // useEffect(() => {
+  //   fetch("https://api.github.com/users/avidev-creator")
+  //     .then((response) => response.json())
+  //     .then((data) => setData(data));
+  // }, []);
+  const data = useLoaderData();
 
   return (
     <>
@@ -35,3 +37,8 @@ export default function Github() {
     </>
   );
 }
+
+export const githubInfoLoader = async () => {
+  const response = await fetch("https://api.github.com/users/avidev-creator");
+  return response.json();
+};
