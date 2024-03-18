@@ -11,3 +11,6 @@ This is a repo to learn REACT by doing small projects.
     6.Understanding some other important Hooks in React.
 
 2. React Addons --
+    1. React Router -- To setup routing in React.
+    2. Context API -- To avoid Props Drilling.
+    3. Redux Tool Kit -- For state management and managing Context API.
