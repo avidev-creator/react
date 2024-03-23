@@ -39,7 +39,7 @@
     1. Inorder to create your reducer you need just have to figure out how many functions you will need.
     2. Here I have created 2 functions that will be used addTodo and removeTodo.
     3. Now reducer is a key and it will contain Object only.
-    4. Inside the reducer every function you will create will have 2 parameters -- state and action. These are objects. Action will also have a property called as payload. This will carry the value.
+    4. Inside the reducer every function you will create will have 2 parameters -- state and action. These are objects. Action will also have a property called as payload. This will carry the value. Syntax -- action.payload.
     5. Below is an example of addTodo function and removeTodo i have created --
         reducers: {
             addTodo: (state, action) => {
